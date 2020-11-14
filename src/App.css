@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+*
+{
+    margin: 0;
+    padding: 0; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  div{
+    display: block;
+    clear: both;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .topnav {
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(247, 248, 249);
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+@media only screen and (max-width: 1024px) and (min-width:540px){
+  .topnav{
+    position:absolute;
+    min-width: 1024px;
   }
 }
+ .logo
+{
+  /* background-image: url(./images/olx-logo-vector.png); */
+    height: 28px;
+    margin: 20px 18px;
+    float: left;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.input-text1{
+  margin: 12px;
+  width: 20%;
+  border: 2px solid  #002f34 ;
+  border-radius: 4px;
+  font-size: 16px;
+  /* background-image: url('images/searchicon.png'); */
+  background-position: 10px 10px; 
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding: 8px 2px 12px 40px;
+ 
+}
+.input-text2{
+  width: 50%;
+  border:solid 2px  #002f34;
+  font-size: 16px;
+  padding: 8px 2px 12px 40px;
+}
+
+.search-icon{
+  background-color: #002f34;
+  width: 40px ;
+  height: 48px;
+  border: solid 0px;
+}
+.sell-logo{
+  width: 110px;
+  height: 50px;
+}
+
+
+
+/* Categories section  */
+
+.Cat-Manu{
+display: flex; 
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #002f34;
+  cursor: pointer;
+}
+.categories{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .sub-categories{
+    display: flex;
+    padding-left: 20px;
+    font-size: 14px;
+    width: calc(100% - 152);
+  }
+  .cat-of{
+    margin: 0px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 32px;
+  }
+  .sub-cat-of{
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 14px;
+    color: #002f34;
+    text-decoration: none;
+  }
+
+  .login-link{
+    margin: 10px;
+  }
+
+  .all-cat{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+/* Ad sesssion start from here */
+
+.ad-image{
+  height: 252px;
+  width:100%;
+  margin: 0px 0px 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 112px;
+   clear: both;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 1024px) and (min-width: 540px){
+  .ad-image{
+    position: relative;
+    top:0;
+    width: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.on-sale{
+  margin-top: 260px;
+}
+
+
+.title-box
+{
+    width: 399px;
+    padding: 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    top: 300px;
+}
+.title-box h2
+{
+    font-size: 24px;
+}
+
+/*-------------product-top CSS----------------*/
+
+
+.product-top img
+{
+    width: 100%;
+}
+.overlay-right
+{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70px;
+}
+.overlay-right .fa
+{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    padding: 7px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.overlay-right .btn-secondary
+{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.product-top:hover .overlay-right
+{
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.5s;
+}
+
+/*--------------Product-bottom-CSS---------------*/
+.product-bottom .fa
+{
+    color: orange;
+    font-size: 10px;
+}
+.product-bottom h3
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-bottom h5
+{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.new-products
+{
+    margin: 50px 0;
+}
+/*----------website-features-------------*/
+.website-features
+{
+   margin: 60px 0;
+}
+
+.website-features img
+{
+    width: 20%;
+}
+.feature-text
+{
+    margin-top: 10px;
+    float: right;
+    width: 80%;
+    padding-left: 20px;
+}
+.feature-box
+{
+    padding-top: 20px;
+}
+
+/*--------------footer---------------*/
+.footer
+{
+    margin-top: 60px;
+    background: #ebeeef;
+    color: #002f34;
+    /* width: 100px; */
+}
+.footer h1
+{
+    font-size: 15px;
+    margin: 25px 0;
+    font-weight: bold;
+}
+.footer p
+{
+    font-size: 14px;
+  line-height: 0.8;
+
+}
+.copyright
+{
+  width: 100%;
+  color: #fff;
+    margin-bottom: -80px;
+    /* text-align: center; */
+    font-size: 15px;
+    padding-bottom: 20px;
+    background-color: #002f34;
+}
+
+/* .copyrights-text{
+  padding-left: 12px
+} */
+.fa-heart-o
+{
+    color: red;
+    font-size: 15px;
+}
+.footer hr
+{
+    margin-top: 10px;
+    background-color: #ccc;
+}
+.footer-image img
+{
+    width: 150px;
+}
+.footer .row .fa
+{
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+
+/*----------------single-product---------------*/
+.single-product
+{
+    margin-top: 70px;
+}
+.new-arrival
+{
+    background: green;
+    width: 50px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.col-md-7 h2
+{
+    color: #555;
+}
+.single-product .fa
+{
+    color: orange;
+}
+.single-product .price
+{
+    color: orange;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.single-product input
+{
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 30px;
+}
+
+.single-product .btn-primary
+{
+    background: orange !important;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 20px;
+    border: none;
+    box-shadow: none !important;
+}
+/*--------------product-description---------------*/
+.product-description h6
+{
+    margin-top: 50px;
+    color: orange;
+}
+.product-description p
+{
+    margin-top: 30px;
+}
+.product-description hr
+{
+    margin-bottom: 50px;
 }
